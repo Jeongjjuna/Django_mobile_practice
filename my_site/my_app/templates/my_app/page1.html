@@ -8,5 +8,26 @@
 <body>
     <h1>EXAMPLE HTML TEMPLATE CONNECTED!</h1>
     <h1>예시 페이지1 입니다</h1>
+
+    <h2>{{ first_name }}</h2>
+    <h2>제 첫 이름은 {{ first_name }} 입니다 </h2>
+    <h2>리스트 {{ some_list }} 입니다 </h2>
+    <h2>리스트 {{ some_list.1 }} 입니다 </h2>
+    <h2>딕셔너리 {{ some_dict }} 입니다 </h2>
+    <h2>딕셔너리 {{ some_dict.inside_key }} 입니다 </h2>
+
+
+
+    <h1>{{ some_list }}</h1>
+
+    <ul>
+    {% for item in some_list %}
+        <li>{{item}}</li>
+
+    {% endfor %}
+
+    </ul>
+    
+
 </body>
 </html>
