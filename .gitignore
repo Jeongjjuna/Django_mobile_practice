@@ -58,8 +58,8 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
+#db.sqlite3
+#db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -141,7 +141,3 @@ media
 
 
 #정적 파일들 ignore 처리해버리기
-images/
-jquery.mobile-1.4.5.min.css
-jquery-1.11.1.min.js
-jquery.mobile-1.4.5.min.js
