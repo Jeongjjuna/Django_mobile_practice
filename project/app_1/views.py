@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def page1(request):
-    return HttpResponse("page1")
+    #
+    return render(request, 'app_1/page1.html')
 
 
 def page1_datail(request, **kwargs):
     print(kwargs)
-    print(kwargs[1])
-    return HttpResponse(f"page1의 디테일 : ")
+    return render("page1_detaie")
 
 
 def page2(request):
