@@ -7,6 +7,7 @@ def page1(request):
 
 def page1_datail(request, **kwargs):
     print(kwargs)
+    print(kwargs[1])
     return HttpResponse(f"page1의 디테일 : ")
 
 
