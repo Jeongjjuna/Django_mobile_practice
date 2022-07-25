@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
+print('ㅇㅇ')
+
+
 def page1(request):
     #
     return render(request, 'app_1/page1.html')
