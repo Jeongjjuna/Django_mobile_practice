@@ -5,7 +5,7 @@
 
     <a href={% url 'page1' %}>아아아</a>
 
-    <form>
+    <form method="post"> {% csrf_token %}
         {{form.as_ul}}
         <input type="submit" value="전송">
     </form>
