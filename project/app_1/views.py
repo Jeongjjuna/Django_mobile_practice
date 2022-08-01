@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import My_program_language
+from .forms import PostForm
 
 def page1(request):
     my_program_language = My_program_language.objects.all()
@@ -13,7 +14,8 @@ def page1_datail(request, **kwargs):
 
 
 def page2(request):
-    return render("page1_detaie")
+    post_form = PostForm()
+    return render(request, 'app_1/page2.html', {'form' : post_form})
 
 
 def page3(request):
