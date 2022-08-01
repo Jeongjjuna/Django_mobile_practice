@@ -1,39 +1,23 @@
-{% load static %}
+{% extends './base.html' %}
 
+{% block content %}
+    <h1>글 목록 페이지에요</h1>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'app_1/css/style.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <header>
+    <a href={% url 'page1' %}>아아아</a>
 
-    </header>
+    <table>
+        <tr>
+            <td>언어</td>
+            <td>설명</td>
+            <td>이미지경로</td>
+        </tr>
+        {% for obj in My_program_language %}
+            <tr>
+                <td>{{obj.name}}</td>
+                <td>{{obj.description}}</td>
+                <td>{{obj.img_path}}</td>
+            </tr>
+        {% endfor %}
+    </table>
 
-    <main>
-        <div class="my_div">
-            <ul>
-                <li>가가가가</li>
-                <li>나나나나</li>
-                <li>다다다다</li>
-                <li>라라라라</li>
-            </ul>
-        </div>
-    
-        <div class="my_div">
-            <h1>가가가가</h1>
-            <h1>나나나나</h1>
-            <h1>다다다다</h1>
-            <h1>라라라라</h1>
-        </div>
-    </main>
-
-    <footer>
-
-    </footer> 
-</body>
-</html>
+{% endblock %}

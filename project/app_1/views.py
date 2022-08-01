@@ -1,13 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-
-print('ㅇㅇ')
-
+from .models import My_program_language
 
 def page1(request):
-    #
-    return render(request, 'app_1/page1.html')
+    my_program_language = My_program_language.objects.all()
+    context = {"My_program_language" : my_program_language}
+    return render(request, 'app_1/page1.html', context = context)
 
 
 def page1_datail(request, **kwargs):
@@ -16,12 +13,12 @@ def page1_datail(request, **kwargs):
 
 
 def page2(request):
-    return HttpResponse("page2")
+    return render("page1_detaie")
 
 
 def page3(request):
-    return HttpResponse("page3")
+    return render("page1_detaie")
 
 
 def page4(request):
-    return HttpResponse("page4")
+    return render("page1_detaie")
